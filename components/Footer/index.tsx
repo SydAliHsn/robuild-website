@@ -13,18 +13,11 @@ const Footer = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
-                <Link href="/" className="mb-8 inline-block">
+                <Link href="/" className="mb-5 inline-block">
                   <Image
-                    src="/images/logo/logo-2.svg"
+                    src="/images/logo/logo-horizontal.png"
                     alt="logo"
-                    className="w-full dark:hidden"
-                    width={140}
-                    height={30}
-                  />
-                  <Image
-                    src="/images/logo/logo.svg"
-                    alt="logo"
-                    className="hidden w-full dark:block"
+                    className="w-full"
                     width={140}
                     height={30}
                   />
@@ -198,14 +191,6 @@ const Footer = () => {
           </div>
 
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
-          <div className="py-8">
-            <p className="text-center text-base text-body-color dark:text-white">
-              Template by UIdeck and{" "}
-              <a href="https://nextjstemplates.com" rel="nofollow noopener">
-                Next.js Templates
-              </a>
-            </p>
-          </div>
         </div>
         <div className="absolute right-0 top-14 z-[-1]">
           <svg

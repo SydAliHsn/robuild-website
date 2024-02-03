@@ -7,14 +7,14 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
   return (
     <>
       <div
-        className="wow fadeInUp hover:shadow-two dark:hover:shadow-gray-dark group relative overflow-hidden rounded-sm bg-white shadow-one duration-300 dark:bg-dark"
+        className="wow fadeInUp hover:shadow-two dark:hover:shadow-gray-dark group relative overflow-hidden rounded-md bg-white shadow-one duration-300 dark:bg-dark"
         data-wow-delay=".1s"
       >
         <Link
           href="/blog-details"
           className="relative block aspect-[37/22] w-full"
         >
-          <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold capitalize text-white">
+          <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-[#fed203] px-4 py-2 text-sm font-bold capitalize text-white">
             {tags[0]}
           </span>
           <Image src={image} alt="image" fill />

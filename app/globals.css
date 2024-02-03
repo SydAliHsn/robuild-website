@@ -4,13 +4,24 @@
 
 @layer base {
   body {
-    /* font-family: "Inter", sans-serif; */
-    font-family: roboto, sans-serif;
+    font-family: var(--font-poppins), sans-serif;
   }
 }
 
 .font-oswald {
-  font-family: var(--font-oswald) !important;
+  font-family: var(--font-oswald), sans-serif !important;
+}
+.font-oswald {
+  font-family: var(--font-poppins), sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-oswald), sans-serif;
 }
 
 @layer components {

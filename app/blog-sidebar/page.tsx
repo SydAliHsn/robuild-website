@@ -7,8 +7,8 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Details Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Details Page for Startup Nextjs Template",
+  title: "Blog Details Page | Robuild: Teach Your Kids to Think like Engineers",
+  description: "This is Blog Details Page for Robuild",
   // other metadata
 };
 
@@ -342,16 +342,16 @@ const BlogSidebarPage = () => {
               </div>
             </div>
             <div className="w-full px-4 lg:w-4/12">
-              <div className="shadow-three dark:bg-gray-dark mb-10 mt-12 rounded-sm bg-white p-6 dark:shadow-none lg:mt-0">
+              <div className="shadow-three dark:bg-gray-dark mb-10 mt-12 rounded-md bg-white p-6 dark:shadow-none lg:mt-0">
                 <div className="flex items-center justify-between">
                   <input
                     type="text"
                     placeholder="Search here..."
-                    className="border-stroke dark:text-body-color-dark dark:shadow-two mr-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+                    className="border-stroke dark:text-body-color-dark dark:shadow-two mr-4 w-full rounded-md border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                   />
                   <button
                     aria-label="search button"
-                    className="flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-sm bg-primary text-white"
+                    className="flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-md bg-primary text-white"
                   >
                     <svg
                       width="20"
@@ -368,7 +368,7 @@ const BlogSidebarPage = () => {
                   </button>
                 </div>
               </div>
-              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-sm bg-white dark:shadow-none">
+              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-md bg-white dark:shadow-none">
                 <h3 className="border-b border-body-color border-opacity-10 px-8 py-4 text-lg font-semibold text-black dark:border-white dark:border-opacity-10 dark:text-white">
                   Related Posts
                 </h3>
@@ -399,7 +399,7 @@ const BlogSidebarPage = () => {
                   </li>
                 </ul>
               </div>
-              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-sm bg-white dark:shadow-none">
+              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-md bg-white dark:shadow-none">
                 <h3 className="border-b border-body-color border-opacity-10 px-8 py-4 text-lg font-semibold text-black dark:border-white dark:border-opacity-10 dark:text-white">
                   Popular Category
                 </h3>
@@ -446,7 +446,7 @@ const BlogSidebarPage = () => {
                   </li>
                 </ul>
               </div>
-              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-sm bg-white dark:shadow-none">
+              <div className="shadow-three dark:bg-gray-dark mb-10 rounded-md bg-white dark:shadow-none">
                 <h3 className="border-b border-body-color border-opacity-10 px-8 py-4 text-lg font-semibold text-black dark:border-white dark:border-opacity-10 dark:text-white">
                   Popular Tags
                 </h3>
