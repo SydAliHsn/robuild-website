@@ -6,6 +6,7 @@ const Brands = () => {
   return (
     <section className="pt-16">
       <div className="container">
+        <h2 className="uppercase text-center mb-5 text-3xl xs:text-4xl font-bold text-primary/90 dark:text-secondary">Don't Just Take Our Word for It!</h2>
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div
@@ -34,7 +35,7 @@ const SingleBrand = ({ brand }: { brand: Brand }) => {
         href={href}
         target="_blank"
         rel="nofollow noreferrer"
-        className="relative h-10 w-full opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 dark:opacity-60 dark:hover:opacity-100"
+        className="relative h-10 w-full hover:opacity-75 transition-all duration-300 ease-in-out"
       >
         <Image src={image} alt={name} fill />
       </a>

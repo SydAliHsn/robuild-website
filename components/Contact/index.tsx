@@ -66,7 +66,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="w-full px-4">
-                    <button className="shadow-submit dark:shadow-submit-dark rounded-md bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90">
+                    <button className="shadow-submit dark:shadow-submit-dark rounded-md bg-secondary px-9 py-4 text-base font-semibold text-primary duration-300 hover:bg-secondary/90">
                       Submit Ticket
                     </button>
                   </div>

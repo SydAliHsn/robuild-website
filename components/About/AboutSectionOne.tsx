@@ -28,7 +28,6 @@ const AboutSectionOne = () => {
                 paragraph="The main 'thrust' is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
                 mb="44px"
               />
-
               <div
                 className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
                 data-wow-delay=".15s"
@@ -51,21 +50,22 @@ const AboutSectionOne = () => {
 
             <div className="w-full px-4 lg:w-1/2">
               <div
-                className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0"
+                className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0 rounded-lg overflow-hidden"
                 data-wow-delay=".2s"
               >
                 <Image
-                  src="/images/about/about-image.svg"
-                  alt="about-image"
+                  src="/images/kids-building.jpg"
+                  alt="kids building something"
                   fill
+                  style={{ objectFit: 'cover' }}
                   className="drop-shadow-three mx-auto max-w-full dark:hidden dark:drop-shadow-none lg:mr-0"
                 />
-                <Image
+                {/* <Image
                   src="/images/about/about-image-dark.svg"
                   alt="about-image"
                   fill
                   className="drop-shadow-three mx-auto hidden max-w-full dark:block dark:drop-shadow-none lg:mr-0"
-                />
+                /> */}
               </div>
             </div>
           </div>

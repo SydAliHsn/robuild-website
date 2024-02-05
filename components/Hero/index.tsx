@@ -7,7 +7,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="dark:bg-[#0a0c3b] z-10 overflow-hidden bg-white"
+        className="dark:bg-primary-dark z-10 overflow-hidden bg-white"
       >
         <div className="container pb-16 pt-[120px] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px] relative">
           <div className="-mx-4 flex flex-wrap relative z-10">
@@ -40,7 +40,7 @@ const Hero = () => {
                   </Link>
                   <Link
                     href="/shop"
-                    className="inline-block rounded-md bg-transparent hover:bg-[#fed203] px-5 py-3 xs:px-8 xs:py-4 text-base font-semibold text-dark duration-300 ease-in-out dark:bg-white/10 dark:text-white border-[3px] border-yellow hover:text-white"
+                    className="inline-block rounded-md bg-transparent hover:bg-secondary px-5 py-3 xs:px-8 xs:py-4 text-base font-semibold text-dark duration-300 ease-in-out dark:bg-white/10 dark:text-white border-[3px] border-yellow hover:text-white"
                   >
                     View Products
                   </Link>
