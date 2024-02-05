@@ -96,7 +96,7 @@ const BlogDetailsPage = () => {
                   <div className="mb-5">
                     <a
                       href="#0"
-                      className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold text-white bg-[#fed203]"
+                      className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold text-white bg-secondary"
                     >
                       Design
                     </a>
