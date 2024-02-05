@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
       <footer
-        className="wow fadeInUp dark:bg-gray-dark relative z-10 bg-secondary pt-3 md:pt-5 lg:pt-8"
+        className="wow fadeInUp dark:bg-primary-dark relative z-10 bg-secondary pt-3 md:pt-5 lg:pt-8"
         data-wow-delay=".1s"
       >
         <div className="container">
@@ -22,7 +22,7 @@ const Footer = () => {
                     height={30}
                   />
                 </Link>
-                <p className="dark:text-body-color-dark mb-9 text-base leading-relaxed text-white font-semibold">
+                <p className="mb-9 text-base leading-relaxed text-white font-semibold">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Integer lobortis.
                 </p>
@@ -30,7 +30,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="dark:text-body-color-dark mr-6 text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                    className="mr-6 text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
                   >
                     <svg
                       width="9"
@@ -44,7 +44,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="dark:text-body-color-dark mr-6 text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                    className="mr-6 text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
                   >
                     <svg
                       width="19"
@@ -58,7 +58,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="dark:text-body-color-dark mr-6 text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                    className="mr-6 text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
                   >
                     <svg
                       width="18"
@@ -72,7 +72,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="dark:text-body-color-dark text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                    className="text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
                   >
                     <svg
                       width="17"
@@ -89,14 +89,14 @@ const Footer = () => {
 
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-semibold text-primary/90 dark:text-white">
+                <h2 className="mb-10 text-xl font-semibold text-primary/90 dark:text-secondary">
                   Useful Links
                 </h2>
                 <ul>
                   <li>
                     <a
                       href="/blogs"
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
                     >
                       Blog
                     </a>
@@ -104,7 +104,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/pricing"
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
                     >
                       Pricing
                     </a>
@@ -112,7 +112,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/about"
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
                     >
                       About
                     </a>
@@ -123,14 +123,14 @@ const Footer = () => {
 
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-semibold text-primary/90 dark:text-white">
+                <h2 className="mb-10 text-xl font-semibold text-primary/90 dark:text-secondary">
                   Terms
                 </h2>
                 <ul>
                   <li>
                     <a
                       href="/"
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
                     >
                       TOS
                     </a>
@@ -138,7 +138,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
                     >
                       Privacy Policy
                     </a>
@@ -146,7 +146,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
                     >
                       Refund Policy
                     </a>
@@ -157,14 +157,14 @@ const Footer = () => {
 
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-semibold text-primary/90 dark:text-white">
+                <h2 className="mb-10 text-xl font-semibold text-primary/90 dark:text-secondary">
                   Support & Help
                 </h2>
                 <ul>
                   <li>
                     <a
                       href="/contact"
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
                     >
                       Open Support Ticket
                     </a>
@@ -172,7 +172,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
                     >
                       Terms of Use
                     </a>
@@ -180,7 +180,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/about"
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
                     >
                       About
                     </a>
