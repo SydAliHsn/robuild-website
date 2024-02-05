@@ -13,6 +13,9 @@ module.exports = {
     },
 
     screens: {
+      // => @media (min-width: 320px) { ... }
+      "2xs": "320px",
+
       xs: "450px",
       // => @media (min-width: 450px) { ... }
 
@@ -38,7 +41,9 @@ module.exports = {
         white: "#FFFFFF",
         black: "#121723",
         dark: "#1D2430",
-        primary: "#254be6",
+        primary: "#074199",
+        "primary-dark": "#0a0c3b",
+        secondary: "#fed203",
         yellow: "#FBB040",
         "body-color": "#788293",
         "body-color-dark": "#959CB1",
