@@ -151,7 +151,7 @@ const Header = () => {
                 </Link> */}
               <Link
                 href="/signin"
-                className="ease-in-up shadow-btn hover:shadow-btn-hover rounded-full bg-secondary lg:px-9 px-7 py-3 text-base font-semibold text-white transition hover:bg-opacity-70 md:block mx-2 border-primary border-2"
+                className=" hidden md:block ease-in-up shadow-btn hover:shadow-btn-hover rounded-full bg-secondary lg:px-9 px-7 py-3 text-base font-semibold text-white transition hover:bg-opacity-70 mx-2 border-primary border-2"
               >
                 Sign In
               </Link>
