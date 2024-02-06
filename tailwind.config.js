@@ -10,6 +10,22 @@ module.exports = {
     container: {
       center: true,
       padding: "1rem",
+
+      screens: {
+        // Not including the "2xs" here because it is not needed. And I added the "2xs" screen size in the "screens" property below myself.
+
+        xs: "450px",
+
+        sm: "575px",
+
+        md: "768px",
+
+        lg: "992px",
+
+        xl: "1200px",
+
+        "2xl": "1400px",
+      },
     },
 
     screens: {
