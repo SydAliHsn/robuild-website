@@ -11,7 +11,7 @@ const Footer = () => {
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap bg-repeat-round bg-[url(/images/square.svg)] pt-8 my-2 lg:my-8">
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
+            <div className="w-full mb-8 px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="max-w-[360px]">
                 <Link href="/" className="mb-5 inline-block">
                   <Image
