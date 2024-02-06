@@ -25,6 +25,13 @@ const menuData: Menu[] = [
     path: "/contact",
     newTab: false,
   },
+  {
+    id: 4,
+    title: "Sign in",
+    path: "/signin",
+    newTab: false,
+    mobileOnly: true,
+  },
   // {
   //   id: 4,
   //   title: "Pages",
