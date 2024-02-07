@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import ProductCard from "@/components/Shop/ProductCard";
-import blogData from "@/components/Blog/blogData";
+import { productData } from "@/components/Shop/ShopData";
 
 export const metadata: Metadata = {
     title: "Shop | Robuild",
@@ -19,10 +19,7 @@ const ShopPage = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 my-20">
-                    <ProductCard blog={blogData[0]} />
-                    <ProductCard blog={blogData[0]} />
-                    <ProductCard blog={blogData[0]} />
-                    <ProductCard blog={blogData[0]} />
+                    {productData.map((product, i) => <ProductCard key={i} product={product} />)}
                 </div>
             </div>
         </section>
