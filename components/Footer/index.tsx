@@ -30,7 +30,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="mr-6 text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                    className="mr-6 text-white font-semibold duration-300 hover:text-primary dark:hover:text-secondary"
                   >
                     <svg
                       width="9"
@@ -44,7 +44,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="mr-6 text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                    className="mr-6 text-white font-semibold duration-300 hover:text-primary dark:hover:text-secondary"
                   >
                     <svg
                       width="19"
@@ -58,7 +58,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="mr-6 text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                    className="mr-6 text-white font-semibold duration-300 hover:text-primary dark:hover:text-secondary"
                   >
                     <svg
                       width="18"
@@ -72,7 +72,7 @@ const Footer = () => {
                   <a
                     href="/"
                     aria-label="social-link"
-                    className="text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                    className="text-white font-semibold duration-300 hover:text-primary dark:hover:text-secondary"
                   >
                     <svg
                       width="17"
@@ -96,7 +96,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/blogs"
-                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-secondary"
                     >
                       Blog
                     </a>
@@ -104,7 +104,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/pricing"
-                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-secondary"
                     >
                       Pricing
                     </a>
@@ -112,7 +112,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/about"
-                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-secondary"
                     >
                       About
                     </a>
@@ -130,7 +130,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-secondary"
                     >
                       TOS
                     </a>
@@ -138,7 +138,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-secondary"
                     >
                       Privacy Policy
                     </a>
@@ -146,7 +146,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-secondary"
                     >
                       Refund Policy
                     </a>
@@ -164,7 +164,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/contact"
-                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-secondary"
                     >
                       Open Support Ticket
                     </a>
@@ -172,7 +172,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/"
-                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-secondary"
                     >
                       Terms of Use
                     </a>
@@ -180,7 +180,7 @@ const Footer = () => {
                   <li>
                     <a
                       href="/about"
-                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-white font-semibold duration-300 hover:text-primary dark:hover:text-secondary"
                     >
                       About
                     </a>
