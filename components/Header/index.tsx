@@ -1,12 +1,17 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { UserAuth } from "@/app/context/AuthContext";
+import ProfileAvatar from "./ProfileAvatar";
 
 const Header = () => {
+  const { user } = UserAuth();
+
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
@@ -42,12 +47,12 @@ const Header = () => {
     <>
       <header
         className={`header left-0 z-40 flex w-full items-center ${sticky
-          ? "dark:bg-dark dark:shadow-sticky-dark fixed z-[9999] shadow-sticky backdrop-blur-sm transition"
+          ? "dark:bg-dark dark:shadow-sticky-dark fixed z-[999] shadow-sticky backdrop-blur-sm transition"
           : "absolute bg-transparent -top-3"
           }`}
       >
-        <div className="container">
-          <div className="relative -mx-4 flex items-center justify-between">
+        <div className="container px-0">
+          <div className="relative flex items-center justify-between">
             <div className="max-w-[12.3rem] px-4 sm:pr-0 pr-9 xl:mr-12">
               <Link
                 href="/"
@@ -68,18 +73,18 @@ const Header = () => {
                 onClick={navbarToggleHandler}
                 id="navbarToggler"
                 aria-label="Mobile Menu"
-                className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-2 2xs:px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
               >
                 <span
-                  className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${navbarOpen ? " top-[7px] rotate-45" : " "
+                  className={`relative my-1.5 block h-0.5 w-[27px] 2xs:w-[30px] bg-black transition-all duration-300 dark:bg-white ${navbarOpen ? " top-[7px] rotate-45" : " "
                     }`}
                 />
                 <span
-                  className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${navbarOpen ? "opacity-0 " : " "
+                  className={`relative my-1.5 block h-0.5 w-[27px] 2xs:w-[30px] bg-black transition-all duration-300 dark:bg-white ${navbarOpen ? "opacity-0 " : " "
                     }`}
                 />
                 <span
-                  className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${navbarOpen ? " top-[-8px] -rotate-45" : " "
+                  className={`relative my-1.5 block h-0.5 w-[27px] 2xs:w-[30px] bg-black transition-all duration-300 dark:bg-white ${navbarOpen ? " top-[-8px] -rotate-45" : " "
                     }`}
                 />
               </button>
@@ -145,25 +150,21 @@ const Header = () => {
               </nav>
             </div>
             <div className="flex items-center justify-end pr-16 lg:pr-0">
-              {/* <Link
-                  href="/signin"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Sign In
-                </Link> */}
-              <Link
+              {!user ? <Link
                 href="/signin"
                 className=" hidden md:block ease-in-up shadow-btn hover:shadow-btn-hover rounded-full bg-secondary lg:px-9 px-7 py-3 text-base font-semibold text-white transition hover:bg-opacity-70 mx-2 border-primary border-2"
               >
                 Sign In
-              </Link>
+              </Link> : <ProfileAvatar className="mx-2 2xs:mx-4 lg:ml-8" />}
               <div>
-                <ThemeToggler className="mr-4" />
+                <ThemeToggler className="mr-4 hidden md:flex" />
               </div>
             </div>
           </div>
         </div>
       </header >
+
+      <ThemeToggler className="scale-110 z-[99] bg-primary dark:bg-secondary text-secondary dark:text-primary fixed bottom-8 left-8 md:hidden" />
     </>
   );
 };

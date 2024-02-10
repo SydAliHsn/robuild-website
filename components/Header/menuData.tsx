@@ -76,7 +76,7 @@ const menuData: Menu[] = [
   //     {
   //       id: 47,
   //       title: "Sign Up Page",
-  //       path: "/signup",
+  //       path: "/register",
   //       newTab: false,
   //     },
   //     {

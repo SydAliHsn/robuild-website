@@ -8,8 +8,8 @@
   }
 }
 
-.font-oswald {
-  font-family: var(--font-oswald), sans-serif !important;
+.font-poppins {
+  font-family: var(--font-poppins), sans-serif !important;
 }
 .font-oswald {
   font-family: var(--font-oswald), sans-serif !important;
@@ -45,3 +45,15 @@ h6 {
     @apply opacity-100;
   }
 }
+
+/* Toastify Notifications */
+:root {
+  /* --toastify-color-success: theme(colors.primary) !important; */
+  --toastify-font-family: poppins, sans-serif !important;
+}
+
+.Toastify__toast-container {
+  z-index: 1000;
+  position: relative;
+}
+/* End of Toastify Notifications */
