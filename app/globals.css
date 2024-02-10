@@ -51,9 +51,4 @@ h6 {
   /* --toastify-color-success: theme(colors.primary) !important; */
   --toastify-font-family: poppins, sans-serif !important;
 }
-
-.Toastify__toast-container {
-  z-index: 1000;
-  position: relative;
-}
 /* End of Toastify Notifications */
