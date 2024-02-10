@@ -11,8 +11,6 @@ const GoogleLoginBtn = ({ innerText }: { innerText?: string }) => {
     const handleSignIn = async () => {
         const user = await googleSignIn();
 
-        console.log(user.photoURL);
-
         toast.success('Signed in successfully!');
         router.push('/');
     };
