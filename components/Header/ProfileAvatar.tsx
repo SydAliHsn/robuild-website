@@ -43,7 +43,8 @@ const ThemeToggler = ({ className }: { className?: string }) => {
                 <Avatar className="!w-full !h-full"
                     round={true}
                     textSizeRatio={2.25}
-                    // Only using the first two words of the name.s
+                    title={user.displayName}
+                    // Only using the first two words of the name.
                     name={user.displayName.split(' ').slice(0, 2).join(' ')}
                     src={user.photoURL}
                 />
