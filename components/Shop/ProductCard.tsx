@@ -11,7 +11,7 @@ const ProductCard = ({ product }: { product: Product }) => {
                 data-wow-delay=".1s"
             >
                 <Link
-                    href="/blog-details"
+                    href="#"
                     className="relative block w-full aspect-[1165/839]"
                 >
                     <Image src={images[0]} alt="image" fill style={{ objectFit: 'cover' }} />
@@ -21,7 +21,7 @@ const ProductCard = ({ product }: { product: Product }) => {
 
                     <h3>
                         <Link
-                            href="/blog-details"
+                            href="#"
                             className="block text-lg leading-6 font-bold text-primary-dark/90 dark:text-secondary"
                         >
                             {title}
