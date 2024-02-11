@@ -44,7 +44,7 @@ const ThemeToggler = ({ className }: { className?: string }) => {
                     round={true}
                     textSizeRatio={2.25}
                     title={user.displayName}
-                    // Only using the first two words of the name.
+                    // Only using the first two words of the name for initials.
                     name={user.displayName.split(' ').slice(0, 2).join(' ')}
                     src={user.photoURL}
                 />
