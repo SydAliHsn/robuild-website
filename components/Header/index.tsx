@@ -164,7 +164,7 @@ const Header = () => {
         </div>
       </header >
 
-      <ThemeToggler className="scale-110 z-[99] bg-primary dark:bg-secondary text-secondary dark:text-primary fixed bottom-8 left-8 md:hidden" />
+      <ThemeToggler className="scale-[1.2] z-[99] bg-primary dark:bg-secondary text-secondary dark:text-primary fixed bottom-8 left-8 md:hidden" />
     </>
   );
 };
