@@ -50,7 +50,7 @@ const ThemeToggler = ({ className }: { className?: string }) => {
                 />
             </button>
 
-            <div className={`absolute right-0 rounded-md bg-gray-50 border border-gray-400 dark:border-body-color transition-all duration-300 dark:bg-dark p-2 px-3 lg:p-3
+            <div className={`absolute right-0 rounded-md bg-gray-50 border border-gray-600 dark:border-body-color transition-all duration-300 dark:bg-dark p-2 px-3 lg:p-3
             ${profileMenu ? 'visible opacity-100 top-[110%]' : 'invisible opacity-0 top-[70%]'}`}>
                 <p className="text-sm py-1.5 md:py-2 text-dark hover:text-primary dark:text-white/70 dark:hover:text-white flex flex-col">{user.displayName}
                     <span className="text-xs">{user.email}</span>
