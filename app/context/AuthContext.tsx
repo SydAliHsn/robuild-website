@@ -14,6 +14,7 @@ const AuthContext = createContext(null);
 
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const emailSignIn = async (email: string, password: string) => {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
@@ -39,12 +40,13 @@ export const AuthContextProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      setLoading(false);
     });
     return () => unsubscribe();
   }, [user]);
 
   return (
-    <AuthContext.Provider value={{ user, googleSignIn, emailSignIn, emailRegister, logOut }}>
+    <AuthContext.Provider value={{ user, loading, googleSignIn, emailSignIn, emailRegister, logOut }}>
       {children}
     </AuthContext.Provider>
   );
