@@ -23,7 +23,7 @@ export async function generateStaticParams() {
   });
 }
 
-const BlogDetailsPage = async ({ params }) => {
+const BlogDetailsPage = async ({ params }: Props) => {
   const { slug } = params;
 
   const article = await getArticles({ slug }) as Article;
