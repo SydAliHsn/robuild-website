@@ -13,7 +13,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Robuild: Teach Your Kids to Think like Engineers",
-  description: "This is Home for Robuild",
+  description: "This is Home Page for Robuild",
   // other metadata
 };
 
