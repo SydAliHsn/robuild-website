@@ -9,6 +9,8 @@ export const metadata: Metadata = {
     // other metadata
 };
 
+export const revalidate = 7200;
+
 const ArticlesPage = async () => {
     const articles = await getArticles({}) as Article[];
 
