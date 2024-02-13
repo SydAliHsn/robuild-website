@@ -1,18 +1,20 @@
 'use client';
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { UserAuth } from "@/app/context/AuthContext";
 import { toast } from "react-toastify";
 
 const GoogleLoginBtn = ({ innerText }: { innerText?: string }) => {
     const router = useRouter();
+    const searchParams = useSearchParams();
     const { googleSignIn } = UserAuth();
 
     const handleSignIn = async () => {
         const user = await googleSignIn();
 
         toast.success('Signed in successfully!');
-        router.push('/');
+        const redirect = searchParams.get('redirect') || '/';
+        router.push(redirect);
     };
 
     return <button onClick={handleSignIn} className="border-stroke dark:text-body-color-dark dark:shadow-two mb-6 flex w-full items-center justify-center rounded-md border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-transparent dark:bg-[#2C303B] dark:hover:border-secondary dark:hover:bg-secondary/5 dark:hover:text-secondary dark:hover:shadow-none">
