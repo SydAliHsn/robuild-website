@@ -17,7 +17,7 @@ const Hero = () => {
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-5 text-3xl 2xs:text-4xl font-bold leading-tight text-gray-dark dark:text-white sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight text-left uppercase">
-                  <p className="text-primary/90">
+                  <div className="text-primary/90">
                     <ReactTypingEffect
                       typingDelay={200}
                       speed={30}
@@ -25,7 +25,7 @@ const Hero = () => {
                       eraseDelay={3500}
                       cursor={" "}
                       text={[`Think`, `Build`, `Innovate`]}
-                    /></p>
+                    /></div>
                   Like An Engineer
                 </h1>
                 <p className="dark:text-gray-light mb-12 text-base !leading-relaxed text-gray-800 sm:text-lg md:text-xl">
