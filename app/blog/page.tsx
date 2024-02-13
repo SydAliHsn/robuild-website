@@ -3,6 +3,7 @@ import blogData from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 import { Metadata } from "next";
+import NotFound from "../not-found";
 
 export const metadata: Metadata = {
   title: "Blog Page | Robuild: Teach Your Kids to Think like Engineers",
@@ -11,6 +12,9 @@ export const metadata: Metadata = {
 };
 
 const Blog = () => {
+
+  return <NotFound />
+
   return (
     <>
       <Breadcrumb

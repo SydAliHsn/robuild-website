@@ -1,10 +1,11 @@
 import RelatedPost from "@/components/Blog/RelatedPost";
-import SharePost from "@/components/Blog/SharePost";
+import SharePost from "@/components/Article/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import NewsLatterBox from "@/components/Contact/NewsLatterBox";
 import Image from "next/image";
 
 import { Metadata } from "next";
+import NotFound from "@/components/NotFound";
 
 export const metadata: Metadata = {
   title: "Blog Details Page | Robuild: Teach Your Kids to Think like Engineers",
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
 };
 
 const BlogSidebarPage = () => {
+
+  return <NotFound />
+
   return (
     <>
       <section className="overflow-hidden pb-[120px] pt-[180px]">
@@ -334,7 +338,7 @@ const BlogSidebarPage = () => {
                         Share this post :
                       </h5>
                       <div className="flex items-center sm:justify-end">
-                        <SharePost />
+                        {/* <SharePost /> */}
                       </div>
                     </div>
                   </div>
