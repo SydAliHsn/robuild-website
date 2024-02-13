@@ -5,10 +5,12 @@ import { FormEventHandler } from "react";
 import { UserAuth } from "../../app/context/AuthContext";
 import Spinner from "../Common/Spinner";
 import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { toast } from "react-toastify";
 
 const Form = () => {
     const router = useRouter();
+    const searchParams = useSearchParams();
     const { emailSignIn } = UserAuth();
 
     const [email, setEmail] = useState('');
@@ -28,7 +30,9 @@ const Form = () => {
             await emailSignIn(email, password);
 
             toast.success('Signed in successfully!');
-            router.push('/');
+
+            const redirect = searchParams.get('redirect') || '/';
+            router.push(redirect);
         } catch (err) {
             setError("Invalid Credentials!");
         } finally {
