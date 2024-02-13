@@ -1,4 +1,4 @@
-const Loading = ({ className }: { className?: string }) => {
+const LoadingGears = ({ className }: { className?: string }) => {
     return <div className={`${className}`}>
         <svg className="machine" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 645 526">
             <defs />
@@ -25,4 +25,4 @@ const Loading = ({ className }: { className?: string }) => {
 
 };
 
-export default Loading;
+export default LoadingGears;
