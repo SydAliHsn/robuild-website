@@ -99,6 +99,7 @@ const Header = () => {
                   {menuData.map((menuItem, index) => (
                     <li key={index} className={`group relative 
                     ${menuItem.mobileOnly ? " md:hidden " : ""}
+                    ${menuItem.signedOutOnly && user ? " hidden " : ""}
                     `}>
                       {menuItem.path ? (
                         <Link

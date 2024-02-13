@@ -31,6 +31,7 @@ const menuData: Menu[] = [
     path: "/signin",
     newTab: false,
     mobileOnly: true,
+    signedOutOnly: true,
   },
   // {
   //   id: 4,

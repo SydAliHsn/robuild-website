@@ -5,4 +5,5 @@ export type Menu = {
   newTab: boolean;
   submenu?: Menu[];
   mobileOnly?: boolean;
+  signedOutOnly?: boolean;
 };
