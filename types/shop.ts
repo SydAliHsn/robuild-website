@@ -3,7 +3,7 @@ export type Product = {
   name: string;
   tag: string;
   price: number;
-  currentPrice?: number;
+  salePrice?: number;
   bullets?: string[];
   description?: string;
   slug: string;

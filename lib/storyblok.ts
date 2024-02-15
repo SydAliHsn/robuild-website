@@ -62,7 +62,7 @@ export const getAllProducts = async (): Promise<Product[]> => {
 
   return productStories.map((story: any) => {
     const { slug, published_at, content } = story;
-    const { name, tag, images, bullets, description, price, currentPrice } =
+    const { name, tag, images, bullets, description, price, salePrice } =
       content;
 
     return {
@@ -72,7 +72,7 @@ export const getAllProducts = async (): Promise<Product[]> => {
       publishedAt: new Date(published_at),
       images: images.map((image: any) => image.filename),
       price: Number(price),
-      currentPrice: Number(currentPrice),
+      salePrice: Number(salePrice),
       bullets: bullets?.split(",").map((tag: string) => tag.trim()) || [],
       shortDescription: description,
     };

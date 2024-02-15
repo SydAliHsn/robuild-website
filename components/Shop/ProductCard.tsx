@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ProductCard = ({ product }: { product: Product }) => {
-    const { name, images, price, currentPrice, tag, bullets } = product;
+    const { name, images, price, salePrice, tag, bullets } = product;
 
     const currency = new Intl.NumberFormat('en-US', {
         minimumFractionDigits: 2,
@@ -42,10 +42,10 @@ const ProductCard = ({ product }: { product: Product }) => {
 
                     <div className="flex gap-2">
                         <p className="text-primary-light text-lg font-semibold">
-                            {currency.format(currentPrice || price)}
+                            {currency.format(salePrice || price)}
                             <span className="uppercase text-xs ml-1">Qar</span>
                         </p>
-                        {currentPrice ? <p className="scale-75 text-lg font-semibold text-gray-500 dark:text-gray-400 line-through">  {currency.format(price)}
+                        {salePrice ? <p className="scale-75 text-lg font-semibold text-gray-500 dark:text-gray-400 line-through">  {currency.format(price)}
                             <span className="uppercase text-xs ml-1">Qar</span>
                         </p> : ''}
                     </div>
