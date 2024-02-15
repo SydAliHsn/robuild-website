@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     // other metadata
 };
 
+export const revalidate = 7200;
+
 const ShopPage = async () => {
     const products = await getProducts({}) as Product[];
 
