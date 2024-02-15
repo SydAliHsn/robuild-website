@@ -71,8 +71,8 @@ export const getAllProducts = async (): Promise<Product[]> => {
       tag,
       publishedAt: new Date(published_at),
       images: images.map((image: any) => image.filename),
-      price,
-      currentPrice,
+      price: Number(price),
+      currentPrice: Number(currentPrice),
       bullets: bullets?.split(",").map((tag: string) => tag.trim()) || [],
       shortDescription: description,
     };

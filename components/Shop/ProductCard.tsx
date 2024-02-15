@@ -42,10 +42,10 @@ const ProductCard = ({ product }: { product: Product }) => {
 
                     <div className="flex gap-2">
                         <p className="text-primary-light text-lg font-semibold">
-                            {currency.format(+currentPrice || +price)}
+                            {currency.format(currentPrice || price)}
                             <span className="uppercase text-xs ml-1">Qar</span>
                         </p>
-                        {currentPrice ? <p className="scale-75 text-lg font-semibold text-gray-500 dark:text-gray-400 line-through">  {currency.format(+price)}
+                        {currentPrice ? <p className="scale-75 text-lg font-semibold text-gray-500 dark:text-gray-400 line-through">  {currency.format(price)}
                             <span className="uppercase text-xs ml-1">Qar</span>
                         </p> : ''}
                     </div>
