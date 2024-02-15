@@ -4,6 +4,11 @@ import Link from "next/link";
 
 const ProductCard = ({ product }: { product: Product }) => {
     const { title, images, price, currentPrice, tag, bullets } = product;
+
+    const currency = new Intl.NumberFormat('en-US', {
+        minimumFractionDigits: 2,
+    });
+
     return (
         <>
             <div
@@ -29,10 +34,11 @@ const ProductCard = ({ product }: { product: Product }) => {
                     </h3>
 
                     <div className="flex gap-2">
-                        <p className="text-primary-light text-lg font-semibold">{currentPrice || price}
+                        <p className="text-primary-light text-lg font-semibold">
+                            {currency.format(+currentPrice || +price)}
                             <span className="uppercase text-xs ml-1">Qar</span>
                         </p>
-                        {currentPrice ? <p className="scale-75 text-lg font-semibold text-gray-500 dark:text-gray-400 line-through">{price}
+                        {currentPrice ? <p className="scale-75 text-lg font-semibold text-gray-500 dark:text-gray-400 line-through">  {currency.format(+price)}
                             <span className="uppercase text-xs ml-1">Qar</span>
                         </p> : ''}
                     </div>
