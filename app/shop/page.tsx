@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import ProductCard from "@/components/Shop/ProductCard";
 import { Product } from "@/types/shop";
 import { getProducts } from "@/lib/helpers";
-import { productData } from "@/components/Shop/ShopData";
 
 export const metadata: Metadata = {
     title: "Shop | Robuild",
