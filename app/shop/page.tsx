@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import ProductCard from "@/components/Shop/ProductCard";
+import { Product } from "@/types/shop";
+import { getProducts } from "@/lib/helpers";
 import { productData } from "@/components/Shop/ShopData";
 
 export const metadata: Metadata = {
@@ -8,7 +10,9 @@ export const metadata: Metadata = {
     // other metadata
 };
 
-const ShopPage = () => {
+const ShopPage = async () => {
+    const products = await getProducts({}) as Product[];
+
     return (
         <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]">
             <div className="container">
@@ -19,7 +23,7 @@ const ShopPage = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 my-20">
-                    {productData.map((product, i) => <ProductCard key={i} product={product} />)}
+                    {products.map((product, i) => <ProductCard key={i} product={product} />)}
                 </div>
             </div>
         </section>

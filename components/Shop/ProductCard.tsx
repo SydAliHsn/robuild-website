@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ProductCard = ({ product }: { product: Product }) => {
-    const { title, images, price, currentPrice, tag, bullets } = product;
+    const { name, images, price, currentPrice, tag, bullets } = product;
 
     const currency = new Intl.NumberFormat('en-US', {
         minimumFractionDigits: 2,
@@ -12,16 +12,23 @@ const ProductCard = ({ product }: { product: Product }) => {
     return (
         <>
             <div
-                className="wow fadeInUp p-2 hover:shadow-two dark:hover:shadow-gray-dark group relative overflow-hidden rounded-lg bg-white shadow-one duration-300 dark:bg-dark border border-gray-200 dark:border-dark hover:border-primary/60 dark:hover:border-primary/60 transition-all ease-in-out"
+                className="wow fadeInUp hover:shadow-two dark:hover:shadow-gray-dark group relative overflow-hidden rounded-lg bg-white shadow-one duration-300 dark:bg-dark border border-gray-200 dark:border-dark hover:border-primary/60 dark:hover:border-primary/60 transition-all ease-in-out group"
                 data-wow-delay=".1s"
             >
                 <Link
                     href="#"
                     className="relative block w-full aspect-[1165/839]"
                 >
-                    <Image src={images[0]} alt="image" fill style={{ objectFit: 'cover' }} />
+                    <Image className="group-hover:!opacity-0 transition-opacity" src={images[0]} alt={name}
+                        fill
+                        quality={80}
+                        style={{ objectFit: 'cover' }} />
+                    <Image className="group-hover:!opacity-100 !opacity-0 transition-opacity" src={images[1]} alt={name}
+                        fill
+                        quality={80}
+                        style={{ objectFit: 'cover' }} />
                 </Link>
-                <div className="p-4 space-y-3">
+                <div className="p-6 space-y-3">
                     <p className="text-primary/85 dark:text-secondary/85 font-semibold font-oswald uppercase text-sm">{tag}</p>
 
                     <h3>
@@ -29,7 +36,7 @@ const ProductCard = ({ product }: { product: Product }) => {
                             href="#"
                             className="block text-lg leading-6 font-bold text-primary-dark/90 dark:text-secondary"
                         >
-                            {title}
+                            {name}
                         </Link>
                     </h3>
 
