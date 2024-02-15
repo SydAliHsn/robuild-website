@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ProductCard = ({ product }: { product: Product }) => {
-    const { name, images, price, salePrice, tag, bullets } = product;
+    const { name, images, price, salePrice, tag, bullets, slug } = product;
 
     const currency = new Intl.NumberFormat('en-US', {
         minimumFractionDigits: 2,
@@ -16,7 +16,7 @@ const ProductCard = ({ product }: { product: Product }) => {
                 data-wow-delay=".1s"
             >
                 <Link
-                    href="#"
+                    href={`/shop/${slug}`}
                     className="relative block w-full aspect-[1165/839]"
                 >
                     <Image className="group-hover:!opacity-0 transition-opacity" src={images[0]} alt={name}
@@ -33,7 +33,7 @@ const ProductCard = ({ product }: { product: Product }) => {
 
                     <h3>
                         <Link
-                            href="#"
+                            href={`/shop/${slug}`}
                             className="block text-lg leading-6 font-bold text-primary-dark/90 dark:text-secondary"
                         >
                             {name}
