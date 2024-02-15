@@ -74,7 +74,7 @@ export const getAllProducts = async (): Promise<Product[]> => {
       price: Number(price),
       salePrice: Number(salePrice),
       bullets: bullets?.split(",").map((tag: string) => tag.trim()) || [],
-      shortDescription: description,
+      description,
     };
   });
 };
