@@ -69,7 +69,7 @@ const ProductDetails: NextPage<Props> = async ({ params }) => {
                             </div>
 
                             <div className="mb-8 space-y-3">
-                                <h3 className="capitalize text-xl text-primary dark:text-secondary">What you Get:</h3>
+                                <h3 className="capitalize text-xl text-primary dark:text-secondary font-semibold">What you Get:</h3>
                                 <ul className="dark:text-body-color-dark text-gray-700 text-sm">
                                     {bullets && bullets.map((bullet, i) => <li className="leading-6" key={i}>
                                         <span className="me-2 text-xl text-secondary dark:text-primary">•</span>
