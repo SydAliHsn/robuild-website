@@ -1,9 +1,23 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import { FormEvent, FormEventHandler, useState } from "react";
+import { toast } from "react-toastify";
 
 const NewsLatterBox = () => {
   const { theme } = useTheme();
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  const handleSubmit: FormEventHandler = (e) => {
+    e.preventDefault();
+
+    setEmail('');
+    setName('');
+
+    toast.success('Subscribed successfully');
+  };
 
   return (
     <div
@@ -14,19 +28,22 @@ const NewsLatterBox = () => {
         Subscribe to receive future updates
       </h3>
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-        Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare
-        massa quis lectus.
+        Stay in the loop and never miss out on the latest products, offers, and tutorials!
       </p>
-      <div>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           placeholder="Enter your name"
           className="border-stroke dark:text-body-color-dark dark:shadow-two mb-4 w-full rounded-md border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
         />
         <input
           type="email"
           name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
           className="border-stroke dark:text-body-color-dark dark:shadow-two mb-4 w-full rounded-md border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
         />
@@ -38,7 +55,7 @@ const NewsLatterBox = () => {
         <p className="dark:text-body-color-dark text-center text-base leading-relaxed text-body-color">
           No spam guaranteed, So please don't send any spam mail.
         </p>
-      </div>
+      </form>
 
       <div>
         <span className="absolute left-2 top-7">
