@@ -21,7 +21,8 @@
     "react-modal-video": "^2.0.0",
     "react-toastify": "^10.0.4",
     "react-typing-effect": "^2.0.5",
-    "storyblok-rich-text-react-renderer": "^2.9.1"
+    "storyblok-rich-text-react-renderer": "^2.9.1",
+    "swiper": "^11.0.6"
   },
   "devDependencies": {
     "@types/node": "^20.8.9",
