@@ -23,7 +23,8 @@ const ProductCard = ({ product }: { product: Product }) => {
                         fill
                         quality={80}
                         style={{ objectFit: 'cover' }} />
-                    <Image className="group-hover:!opacity-100 !opacity-0 transition-opacity" src={images[1]} alt={name}
+                    <Image className="group-hover:!opacity-100 !opacity-0 transition-opacity"
+                        src={images[1] || images[0]} alt={name}
                         fill
                         quality={80}
                         style={{ objectFit: 'cover' }} />
