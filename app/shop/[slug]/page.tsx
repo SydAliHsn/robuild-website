@@ -59,9 +59,9 @@ const ProductDetails: NextPage<Props> = async ({ params }) => {
                                 </h2>
                                 <p className="inline-block space-x-3 mb-6 text-4xl font-bold text-gray-700 dark:text-gray-400 ">
                                     <span className="text-primary dark:text-secondary">{currency.format(salePrice || price)} <span className="text-2xl">QAR</span></span>
-                                    {salePrice && <span
+                                    {salePrice ? <span
                                         className="text-lg font-normal text-gray-500 line-through dark:text-gray-400">{currency.format(price)} <span className="text-base">QAR</span>
-                                    </span>}
+                                    </span> : null}
                                 </p>
                                 <p className="text-sm leading-6 lg:max-w-md text-gray-700 dark:text-gray-400 whitespace-pre-wrap">
                                     {description}
