@@ -51,7 +51,7 @@ const ProductCard = ({ product }: { product: Product }) => {
                         </p> : ''}
                     </div>
 
-                    <ul className="dark:text-body-color-dark text-gray-700 text-sm pt-2">
+                    <ul className="dark:text-body-color-dark text-gray-700 text-sm">
                         {bullets && bullets.map((bullet, i) => <li className="leading-6" key={i}>
                             <span className="me-1">•</span>
                             {bullet}
