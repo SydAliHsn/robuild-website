@@ -13,6 +13,7 @@ const Contact = () => {
     setLoading(true);
 
     const formData = new FormData(e.currentTarget);
+
     formData.append('access_key', process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY);
 
     const object = Object.fromEntries(formData);
@@ -72,6 +73,7 @@ const Contact = () => {
                         type="text"
                         name="name"
                         placeholder="Enter your name"
+                        required
                         className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-md border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -88,6 +90,7 @@ const Contact = () => {
                         type="email"
                         name="email"
                         placeholder="Enter your email"
+                        required
                         className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-md border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -102,6 +105,7 @@ const Contact = () => {
                       </label>
                       <textarea
                         name="message"
+                        required
                         rows={5}
                         placeholder="Enter your Message"
                         className="border-stroke dark:text-body-color-dark dark:shadow-two w-full resize-none rounded-md border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
