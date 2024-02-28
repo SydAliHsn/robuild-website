@@ -22,11 +22,11 @@ const LoadingScreen = ({ loading }: { loading?: boolean }) => {
                 setVisible(false);
                 document.body.classList.remove('!overflow-hidden');
             }
-
-            return () => {
-                document.body.classList.remove('!overflow-hidden');
-            };
         }
+
+        return () => {
+            document.body.classList.remove('!overflow-hidden');
+        };
     }, [loading]);
 
     if (!visible) return null;
