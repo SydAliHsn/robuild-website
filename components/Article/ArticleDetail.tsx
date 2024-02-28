@@ -11,26 +11,26 @@ import LoadingScreen from '../Common/LoadingScreen';
 import { toast } from 'react-toastify';
 
 const ArticleDetail = ({ article }: { article: Article }) => {
-    const router = useRouter();
+  const router = useRouter();
 
-    const { user, loading } = UserAuth();
+  const { user, loading } = UserAuth();
 
-    if (loading) return <LoadingScreen loading={loading} />
+  if (!loading && !user) {
+    toast.error('Please login to view this page.');
+    router.push(`/signin?redirect=/articles/${article.slug}`);
+  };
 
-    if (!loading && !user) {
-        toast.error('Please login to view this page.');
-        router.push(`/signin?redirect=/articles/${article.slug}`);
-    };
+  if (loading || !user) return <LoadingScreen loading={loading} />
 
-    return <section className="pb-[120px] pt-[150px]">
-        <div className="container">
-            <div className="-mx-4 flex flex-wrap justify-center">
-                <div className="w-full px-4 lg:w-8/12">
-                    <div>
-                        <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
-                            {article.title}
-                        </h2>
-                        {/* <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
+  return <section className="pb-[120px] pt-[150px]">
+    <div className="container">
+      <div className="-mx-4 flex flex-wrap justify-center">
+        <div className="w-full px-4 lg:w-8/12">
+          <div>
+            <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
+              {article.title}
+            </h2>
+            {/* <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
               <div className="flex flex-wrap items-center">
                 <div className="mb-5 mr-10 flex items-center">
                   <div className="mr-4">
@@ -111,9 +111,9 @@ const ArticleDetail = ({ article }: { article: Article }) => {
               </div>
             </div> */}
 
-                        <div className='mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed [&_img]:rounded'>
-                            {render(article.content)}</div>
-                        {/* <div>
+            <div className='mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed [&_img]:rounded'>
+              {render(article.content)}</div>
+            {/* <div>
               <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                 Duis aute irure dolor in reprehenderit in voluptate velit
                 esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
@@ -325,30 +325,30 @@ const ArticleDetail = ({ article }: { article: Article }) => {
                 dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                 mattis vulputate cupidatat.
               </p> */}
-                        <div className="items-center justify-between sm:flex">
-                            {article.tags.length && <div className="mb-5">
-                                <h4 className="mb-3 text-sm font-medium text-body-color">
-                                    Tags :
-                                </h4>
-                                <div className="flex items-center">
-                                    {article.tags.map((tag, i) => <TagButton key={i} text={tag} />)}
-                                </div>
-                            </div>}
-                            <div className="mb-5">
-                                <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right">
-                                    Share this post :
-                                </h5>
-                                <div className="flex items-center sm:justify-end">
-                                    <SharePost slug={article.slug} />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* </div> */}
+            <div className="items-center justify-between sm:flex">
+              {article.tags.length && <div className="mb-5">
+                <h4 className="mb-3 text-sm font-medium text-body-color">
+                  Tags :
+                </h4>
+                <div className="flex items-center">
+                  {article.tags.map((tag, i) => <TagButton key={i} text={tag} />)}
                 </div>
+              </div>}
+              <div className="mb-5">
+                <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right">
+                  Share this post :
+                </h5>
+                <div className="flex items-center sm:justify-end">
+                  <SharePost slug={article.slug} />
+                </div>
+              </div>
             </div>
+          </div>
+          {/* </div> */}
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 }
 
 export default ArticleDetail;
