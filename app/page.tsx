@@ -11,6 +11,7 @@ import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Metadata } from "next";
+import LoadingScreen from "@/components/Common/LoadingScreen";
 
 export const metadata: Metadata = {
   title: "Robuild: Teach Your Kids to Think like Engineers",
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <LoadingScreen />
       <ScrollUp />
       <Hero />
       {/* <Features /> */}
