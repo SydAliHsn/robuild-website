@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { getArticles } from "@/lib/helpers";
 import { Article } from "@/types/article";
 import ArticleCard from "@/components/Article/ArticleCard";
+import LoadingScreen from "@/components/Common/LoadingScreen";
 
 export const metadata: Metadata = {
     title: "Articles | Robuild",
@@ -14,7 +15,8 @@ export const revalidate = 7200;
 const ArticlesPage = async () => {
     const articles = await getArticles({}) as Article[];
 
-    return (
+    return (<>
+        <LoadingScreen />
         <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]">
             <div className="container">
                 <div className="bg-[url(/images/doodle.png)] rounded-lg overflow-hidden">
@@ -28,6 +30,7 @@ const ArticlesPage = async () => {
                 </div>
             </div>
         </section>
+    </>
     );
 };
 
