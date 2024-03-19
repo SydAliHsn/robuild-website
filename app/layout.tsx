@@ -31,7 +31,7 @@ export default function RootLayout({
       */}
       <head />
 
-      <body className={`bg-[#FCFCFC] dark:bg-black ${oswald.variable} ${poppins.variable}`}>
+      <body className={`bg-[#eff6f8] dark:bg-black ${oswald.variable} ${poppins.variable}`}>
         <Providers>
           <ToastContainer />
           <Header />
